@@ -1,8 +1,8 @@
 node {
-      def mvnHome = tool 'MVN 3.8'
+      def mvnHome = tool 'MVN_HOME'
      
     stage('Checkout'){
-        checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/sahilverma3120/Assignment-5-Nagarro-DevOps']]])
+        checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/sahilverma3120/JenDoc_Sonar']]])
     }
     
     stage('build') {
